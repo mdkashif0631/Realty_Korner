@@ -1,0 +1,42 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.stickerheadline {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    margin: 1.5rem 0rem 0.5rem 0rem;
+}
+
+.stickerheadline h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.stickerheadline p {
+    margin-bottom: 0px;
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 0px;
+
+}
+
+@media screen and (max-width: 980px) {
+    .stickerheadline h1 {
+        margin-bottom: .5rem;
+    }
+
+    .stickerheadline p {
+        width: 98%;
+    }
+
+}

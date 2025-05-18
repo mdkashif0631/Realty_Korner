@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+.containerBox{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 60%;
+    min-height: 40vh;
+}
+.sticker_pro{
+    width: 100%;
+}

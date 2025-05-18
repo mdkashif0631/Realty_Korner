@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+.filterForm{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    
+    /* margin: 5px; */
+    padding: 20px 0px;
+    background-color: white;
+
+}

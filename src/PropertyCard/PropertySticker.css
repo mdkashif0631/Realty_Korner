@@ -1,0 +1,78 @@
+.scrollingPannel{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.CardImg {
+    height: 300px;
+}
+
+.cardContainer {
+    /* border: 2px solid #333; */
+}
+
+.stickerback {
+    /* background: linear-gradient(to left, rgb(72, 180, 222), rgb(33, 28, 132)); */
+}
+
+.CardImg {
+    border: 5px solid;
+    border-image: linear-gradient(to right, rgb(72, 180, 222), rgb(33, 28, 132));
+    animation: moving-border 5s infinite;
+    border-image-slice: 1;
+}
+
+.cardContainer {
+    border: none;
+}
+
+.stickerimages {
+    position: relative;
+}
+
+.logoImage {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid rgb(72, 180, 222);
+    border-image-slice: 1;
+
+}
+
+.logoImage img {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+
+}
+
+.stickerimages p {
+    text-align: end;
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+    width: 90%;
+    background-color: #717070b9;
+    font-size: 8px;
+    font-weight: 400;
+    padding-right: 5px;
+    color: white;
+}
+
+.viewOfferButton {
+    background-color: rgb(33, 28, 132);
+    border: "none";
+    &:hover {
+        border: 1px solid rgb(33, 28, 132);
+        background-color: white;
+        color: rgb(33, 28, 132)
+    }
+}

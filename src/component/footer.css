@@ -1,0 +1,121 @@
+.footer {
+  /* background: linear-gradient(to right, rgb(72, 180, 222), rgb(91, 85, 201)); */
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgba(33, 28, 132, 0.914);
+
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* border: 1px solid #333; */
+}
+.aboutUsbox{
+  
+  /* border: 1px solid #333; */
+}
+.footer h2 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #EFD7A1;
+}
+
+.footer p,
+.footer span {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .icon-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+}
+.icon-row .icons{
+  font-size: 25px;
+}
+.footerLinkBox{
+  /* display: grid; */
+  /* align-items: flex-start; */
+  /* border: 1px solid #333; */
+
+  
+}
+.footerLinkBox h2{
+  /* border: 1px solid #333; */
+
+}
+.footer-links {
+  display: grid;
+  align-items: flex-start;
+
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* margin: auto; */
+  gap: 8px;
+  font-size: 14px;
+}
+.instaPostBox{
+  /* border: 1px solid #333; */
+}
+.instagram-box {
+  background-color: #959292b8;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 10px auto;
+  gap: 16px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #afafaf9d;
+  /* padding: 10px; */
+  border-radius: 4px;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+
+.footer-social a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #f9f9f9;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

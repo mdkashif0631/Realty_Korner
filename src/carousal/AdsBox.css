@@ -1,0 +1,19 @@
+/* Add this to your CSS or inside a styled component */
+/* .slide-box {
+    position: fixed;
+    bottom: 20px;
+    right: -300px; 
+    width: 250px;
+    background: #ffc107;
+    color: black;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: right 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .slide-box.show {
+    right: 20px; 
+  }
+   */

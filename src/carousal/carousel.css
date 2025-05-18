@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+.carousalItem{
+    position: relative;
+}
+.proj_dtl{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    
+}
+.proj_dtl h1{
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-width: 700px;
+    padding: 2px 5px;
+    margin-bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.786);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+.proj_dtl p{
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-width: 300px;
+    padding: 2px 5px;
+    background-color: rgba(219, 0, 0, 0.719);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+
+}
+.carousel-indicators [data-bs-target]{
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+.carousel-control-next-icon{
+    display: none;
+}
+.carousel-control-prev-icon{
+    display: none;
+}
+.carousel-control-prev{
+    width: 10%;
+}
+.carousel-indicators{
+    display: none;
+}
+.carouselContainer{
+    height: 600px;
+    position: relative;
+}
+.carouselbox{
+    height: 100%;
+}
+.carousel .adsBox{
+    position: absolute;
+    bottom: 67px;
+    left: 20%;
+    height: 120px;
+    width: 60%;
+    background-color: rgb(255, 253, 253);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    overflow: hidden;
+
+}
