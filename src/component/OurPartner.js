@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carousel, Card, Row, Col, Container } from 'react-bootstrap';
+import { Carousel, Card, Row, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ourpartner.css';
 import TrumpLogo from '../img/TrumpLogo.jpg';
@@ -108,7 +108,7 @@ const partners = [
 
 const OurPartnerCard = ({ partner }) => (
     <Card className="partner_card mb-4">
-        <img className='partnerCard_img' variant="top" src={partner.image} />
+        <img className='partnerCard_img' variant="top" src={partner.image} alt='loho' />
     </Card>
 );
 

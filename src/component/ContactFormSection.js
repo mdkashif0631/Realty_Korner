@@ -22,7 +22,7 @@ const ContactFormSection = () => {
               <div>
                 <h4>Cleaning Service</h4>
                 <p>It’s fun and easy to create your professionally looking website using GoodHomes Theme!</p>
-                <a href="#">Learn More &rsaquo;</a>
+                {/* <a href="#">Learn More &rsaquo;</a> */}
               </div>
             </div>
 
@@ -31,7 +31,7 @@ const ContactFormSection = () => {
               <div>
                 <h4>Interior Design</h4>
                 <p>It’s fun and easy to create your professionally looking website using GoodHomes Theme!</p>
-                <a href="#">Learn More &rsaquo;</a>
+                {/* <a href="#">Learn More &rsaquo;</a> */}
               </div>
             </div>
           </div>
