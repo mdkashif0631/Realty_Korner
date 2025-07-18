@@ -1,0 +1,110 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.admin-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #a9a8a8bf;
+  border-radius: 6px;
+  outline: none;
+}
+
+form select {
+  background: white;
+}
+
+form .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+form .buttons button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form .buttons button:hover {
+  background-color: #2b6cb0;
+}
+
+.amenities-add-category {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #2c5282;
+  display: flex;
+  align-items: center;
+}
+
+h4 svg {
+  margin-right: 0.5rem;
+  color: #4fd1c5;
+}
+
+label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+.beds_box{
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #acacacba;
+  border-radius: 10px;
+}
+.beds_category{
+  display: grid;
+  grid-template-columns: 200px auto;
+  text-align: left;
+  margin: 5px;
+}
+.beds_category input{
+  border: 1px solid #a9a8a8bf;
+
+}
+.beds_input{
+width: 20px;
+}
+.project_images{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

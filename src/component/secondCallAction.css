@@ -1,0 +1,64 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.secondCallActionContainer{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    background-color:#2764ffaf;
+    padding: 2rem 0rem;
+    position: relative;
+    margin-top: 3rem;
+    /* border: 2px solid #333; */
+}
+.secondCallActionContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.secondCallActionContainer h2{
+    min-height: 80px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin-bottom: 0px;
+   
+}
+.secondCallActionContainer button{
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    &:hover{
+        color: #000000;
+        border: 1px solid #000000;
+        background-color: rgb(254, 254, 255);
+    }
+ 
+}
+@media screen and (max-width: 980px) {
+    .secondCallActionContainer{
+        padding: 1rem 0.5rem;
+    }    
+    .secondCallActionContainer h2{
+    font-size: 30px;
+    margin-bottom: 0px;
+    &:hover{
+        color: white;
+    }
+}
+}

@@ -1,0 +1,57 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container styling */
+.login-container {
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+/* Form styling */
+.login-form {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  text-align: center;
+}
+
+/* Heading */
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Inputs */
+.login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Button */
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4facfe;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #00c3ff;
+}
