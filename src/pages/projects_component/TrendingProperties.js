@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './css-all-project.css';
-import { Carousel, Row, Col, Container } from 'react-bootstrap';
+import { Carousel, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PropertyCardTemplate from '../../PropertyCard/PropertyCardTemplate';
 
@@ -48,7 +48,7 @@ const TrendingProperties = ({ project }) => {
                 <Carousel controls={chunked.length > 1} indicators={false} interval={null}>
                     {chunked.map((group, idx) => (
                         <Carousel.Item key={idx}>
-                            <Container className="my-3 stickerback ">
+                            <div className="my-1 stickerback p-4">
                                 <Row>
                                     {group.map((property, i) => (
                                         <Col key={i} xs={12} sm={6} md={3}>
@@ -56,7 +56,7 @@ const TrendingProperties = ({ project }) => {
                                         </Col>
                                     ))}
                                 </Row>
-                            </Container>
+                            </div>
                         </Carousel.Item>
                     ))}
                 </Carousel>
