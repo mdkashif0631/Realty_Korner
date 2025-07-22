@@ -11,8 +11,8 @@ function Price({ max_price, min_price }) {
   return (
     <h2 className="fw" style={{ color: "black" }}>
       {max_price === "Onwards"
-        ? `₹ ${min_price / 10000000} Cr ${max_price}`
-        : `₹ ${min_price / 10000000} Cr - ₹ ${max_price / 10000000} Cr`}
+        ? `₹ ${(min_price / 10000000)?.toFixed(2).toString().slice(0, 4) } Cr ${max_price}`
+        : `₹ ${(min_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr - ₹ ${(max_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr`}
     </h2>
   );
 }
@@ -127,11 +127,11 @@ const FeaturedProjectsCarousel = () => {
                         <p><BiSolidArea className='uniticon' /> Project Size : {proj.Built || "N/A"} Acre</p>
                         {(() => {
                           const builtUpMap = [
-                            proj.Built_Up_Area_2bhk,
-                            proj.Built_Up_Area_3bhk,
-                            proj.Built_Up_Area_4bhk,
-                            proj.Built_Up_Area_5bhk,
-                            proj.Built_Up_Area_Penthouse
+                            proj.Super_Area_2bhk,
+                            proj.Super_Area_3bhk,
+                            proj.Super_Area_4bhk,
+                            proj.Super_Area_5bhk,
+                            proj.Super_Area_Penthouse
                           ];
 
                           // Filter out empty strings and non-numeric values

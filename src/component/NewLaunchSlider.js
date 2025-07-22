@@ -124,7 +124,7 @@ const NewLaunchSlider = () => {
                   <p style={{ fontSize: "10px" }}>{project.Location}</p>
                   <p>
                     <strong>
-                      ₹{project.Start_price / 10000000} - ₹{project.End_price / 10000000} Cr
+                      ₹{(project.Start_price / 10000000)?.toFixed(2).toString().slice(0, 4)} - ₹{(project.End_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr
                     </strong>{" "}
                     | {getBHKString(project)}
                   </p>

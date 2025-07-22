@@ -121,7 +121,7 @@ export default function Commercial() {
                                 <h3 className="price-label">₹ </h3>
                                 <span className="price-value">
                                     {current?.Start_price && current?.End_price
-                                        ? `${current.Start_price / 10000000} - ${current.End_price / 10000000} Cr`
+                                        ? `${(current.Start_price / 10000000)?.toFixed(2).toString().slice(0, 4)} - ${(current.End_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr`
                                         : 'Price on Request'}
                                 </span>
                                 {/* <span className="onwards">Onwards</span> */}

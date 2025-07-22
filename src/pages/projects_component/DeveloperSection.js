@@ -1,12 +1,12 @@
 import React from 'react';
 import './DeveloperSection.css'; // Renamed CSS file for clarity
 
-const DeveloperSection = () => {
+const DeveloperSection = ({ project }) => {
   return (
     <div className="developer-container">
       <div className="developer-card">
-        <img src="./img/elaan.png" alt="Developer Logo" className="developer-logo" />
-        <h3 className="developer-title">Developer</h3>
+        <img src={project.Developer_Logo ? `${project.Developer_Logo}` : '../img/RealtyKornerLogo.png'} alt="Developer Logo" className="developer-logo" />
+        <h3 className="developer-title">{project.Developer_Name}</h3>
         <a href="http://localhost:3000/projectpage" className="developer-link">View all Projects <span>→</span></a>
       </div>
       <div className="developer-info">
@@ -16,7 +16,12 @@ const DeveloperSection = () => {
           <div><strong>0</strong><div>Upcoming Projects</div></div>
         </div>
         <p className="developer-description">
-          Developer is the residential and commercial real estate development part of the Larsen & Toubro Group, an Indian multinational conglomerate which has an experience of mor... <span className="read-more">Read more</span>
+          {project.Description
+            ? (project.Description.length > 200
+              ? project.Description.substring(0, 200) + '...'
+              : project.Description)
+            : 'No description available'}
+          <span className="read-more">Read more</span>
         </p>
       </div>
     </div>

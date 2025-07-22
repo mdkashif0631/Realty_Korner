@@ -191,7 +191,7 @@ const CommercialPage = () => {
             <p>Price</p>
           </div>
           <h3>
-            {project?.Start_price/10000000 || "N/A"}Cr - {project?.End_price/10000000 || "N/A"}Cr
+            {(project?.Start_price/10000000)?.toFixed(2).toString().slice(0, 4) || "N/A"}Cr - {(project?.End_price/10000000)?.toFixed(2).toString().slice(0, 4) || "N/A"}Cr
           </h3>
         </div>
 

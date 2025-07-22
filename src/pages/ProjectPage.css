@@ -203,14 +203,44 @@ width: 200px;
   bottom: 20px;
   right: 50px;
   background-color: rgba(255, 255, 255, 0.645);
-  /* border: 1px solid #000000; */
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 20px;
 }
-.rera_btn p {
-  font-size: 10px;
-  color: rgb(0, 0, 0);
+.rera-tooltip {
+  position: relative;
+  /* display: inline-block; */
+  font-weight: 600;
+  font-size: 12px;
+  color: #000000;
+  cursor: pointer;
 }
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+
+  /* Positioning */
+  position: absolute;
+  z-index: 1;
+  top: -150%;
+  right: 0;
+
+  /* Optional fade animation */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.rera-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .project-status {
   display: flex;

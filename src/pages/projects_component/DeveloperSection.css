@@ -29,8 +29,11 @@
 
 .developer-link {
   font-size: 0.9rem;
-  color: #ff6600;
+  color: #2763ff;
   text-decoration: none;
+  &:hover{
+    color: #5e5e5e;
+  }
 }
 
 .developer-info {
@@ -62,6 +65,9 @@
   font-weight: bold;
   color: #000;
   cursor: pointer;
+  &:hover{
+    color: #545454;
+  }
 }
 @media screen and (max-width: 960px) {
   .developer-container {

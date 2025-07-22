@@ -236,7 +236,7 @@ const ProjectHeader = ({ project }) => {
 
                     <div id="developer" className='bank-part'>
                         <h2>Developer</h2>
-                        <DeveloperSection />
+                        <DeveloperSection project={project}/>
                     </div>
 
                     <div id="projects" className='bank-part'>

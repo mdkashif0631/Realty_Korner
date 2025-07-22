@@ -618,7 +618,13 @@ const AddProperty = () => {
                 </div>
                 <div className='beds_category'>
                   <label>Possession :</label>
-                  <input placeholder='Enter ' type='date' name="Possession" onChange={handleChange} value={formData.Possession} />
+                  <input
+                    type='month'
+                    name="Possession"
+                    placeholder='Select Month & Year'
+                    onChange={handleChange}
+                    value={formData.Possession}
+                  />
                 </div>
                 <div className='beds_category'>
                   <label>Mode :</label>

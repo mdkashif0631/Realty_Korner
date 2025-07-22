@@ -90,7 +90,7 @@ const RecommendedProperties = () => {
               </div>
               <div className='property-card-details'>
                 <div className="property-title">{property.Project_Name}</div>
-                <div className="price-tag"> ₹{property.Start_price / 10000000} - ₹{property.End_price / 10000000} Cr</div>
+                <div className="price-tag"> ₹{(property.Start_price / 10000000)?.toFixed(2).toString().slice(0, 4)} - ₹{(property.End_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr</div>
                 <div className="property-location">In {property.Location}</div>
                 <div className="property-posted">{getBHKString(property)}</div>
                 <div className="property-posted">{property.posted}</div>

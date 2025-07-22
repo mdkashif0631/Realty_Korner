@@ -115,9 +115,9 @@ const ProjectPage = () => {
 
           <div className="rera_btn">
             <p className="rera-tooltip">
-              RERA Verified
+              RERA Verified 
               <span className="tooltip-text">
-                {project?.Developer_Rera_No || "Not Available"}
+                { project?.Developer_Rera_No || "Not Available"}
               </span>
             </p>
           </div>
@@ -211,7 +211,7 @@ const ProjectPage = () => {
               <p>🏡</p>
               <p>Total No. of Units</p>
             </div>
-            <h3>{project?.Number_of_unit || "N/A"}units</h3>
+            <h3>{project?.Number_of_unit || "N/A"} units</h3>
           </div>
 
           <div className="stat-box last-box">

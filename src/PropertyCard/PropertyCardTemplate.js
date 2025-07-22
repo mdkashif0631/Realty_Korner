@@ -49,7 +49,7 @@ const PropertyCardTemplate = ({ property }) => (
 
 
       <h4 className="text" style={{ color: "black", fontSize: "20px"  }}>
-        <FaRupeeSign style={{ color: "#2763ff" }}/>{`${property.Start_price / 10000000}Cr - ` || ""}<FaRupeeSign style={{color:"#2763ff"}}/>{`${property.End_price / 10000000}Cr` || ""}
+        <FaRupeeSign style={{ color: "#2763ff" }}/>{`${(property.Start_price / 10000000)?.toFixed(2).toString().slice(0, 4) }Cr - ` || ""}<FaRupeeSign style={{color:"#2763ff"}}/>{`${(property.End_price / 10000000)?.toFixed(2).toString().slice(0, 4)}Cr` || ""}
       </h4>
 
       {(() => {
@@ -90,11 +90,11 @@ const PropertyCardTemplate = ({ property }) => (
 
       {(() => {
         const builtUpMap = [
-          property.Built_Up_Area_2bhk,
-          property.Built_Up_Area_3bhk,
-          property.Built_Up_Area_4bhk,
-          property.Built_Up_Area_5bhk,
-          property.Built_Up_Area_Penthouse
+          property.Super_Area_2bhk,
+          property.Super_Area_3bhk,
+          property.Super_Area_4bhk,
+          property.Super_Area_5bhk,
+          property.Super_Area_Penthouse
         ];
 
         // Filter out empty strings and non-numeric values
@@ -107,11 +107,11 @@ const PropertyCardTemplate = ({ property }) => (
         const min = Math.min(...builtUpValues);
         const max = Math.max(...builtUpValues);
 
-        const displayBuiltUpArea =
+        const displaySuperArea =
           min === max ? `${min} sq.ft` : `${min} - ${max} sq.ft`;
 
         return <p className='mb-1 text-muted' style={{ fontSize: "12px", fontWeight: "600" }}>
-          <BiSolidArea style={{ color: "#2763ff", fontSize: "16px" }} />:  {displayBuiltUpArea} (Sq.Ft)</p>;
+          <BiSolidArea style={{ color: "#2763ff", fontSize: "16px" }} />:  {displaySuperArea}</p>;
       })()}
 
       <p className="mb-1 text-muted" style={{ fontSize: "12px", fontWeight: "600" }}>

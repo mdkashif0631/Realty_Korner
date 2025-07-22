@@ -115,22 +115,46 @@ export default function Residential() {
                                 </div>
 
                                 <h2 className="project-title">{current?.Project_Name}</h2>
-                                <p className="location">at {current?.Location} by {current?.Developer_Name}</p>
+                                <p className="location">At {current?.Location} by {current?.Developer_Name}</p>
                                 <div className="rera-tag">RERA Verified</div>
 
                                 <div className="price">
                                     <h3 className="price-label">₹ </h3>
                                     <span className="price-value">
-                                        {current?.Start_price && current?.End_price
-                                            ? `${current.Start_price / 10000000} - ${current.End_price / 10000000} Cr`
-                                            : 'Price on Request'}
+                                        {`${(current?.Start_price / 10000000)?.toFixed(2).toString().slice(0, 4) || "N/A"} - ${(current?.End_price / 10000000)?.toFixed(2).toString().slice(0, 4) || "N/A"}  Cr`}
                                     </span>
                                     {/* <span className="onwards">Onwards</span> */}
                                 </div>
 
                                 <div className="details">
                                     <div className='left_Detail'>
-                                        <p><BiSolidArea className='unit_icon' /> : {current?.Super_Area_3bhk || current?.Super_Area_2bhk || 'Area N/A'}</p>
+                                        {(() => {
+                                                const builtUpMap = [
+                                                  current.Super_Area_2bhk,
+                                                  current.Super_Area_3bhk,
+                                                  current.Super_Area_4bhk,
+                                                  current.Super_Area_5bhk,
+                                                  current.Super_Area_Penthouse
+                                                ];
+                                        
+                                                // Filter out empty strings and non-numeric values
+                                                const builtUpValues = builtUpMap
+                                                  .filter(area => area && area !== "")
+                                                  .map(area => parseFloat(area))
+                                                  .filter(area => !isNaN(area));
+
+                                                  if (builtUpValues.length === 0) return <p><BiSolidArea className='unit_icon' /> : N/A</p>;
+                                        
+                                        
+                                                const min = Math.min(...builtUpValues);
+                                                const max = Math.max(...builtUpValues);
+                                        
+                                                const displaySuperArea =
+                                                  min === max ? `${min} sq.ft` : `${min} - ${max} sq.ft`;
+                                        
+                                                return <p >
+                                                  <BiSolidArea className='unit_icon' />:  {displaySuperArea}</p>;
+                                              })()}
                                         <p><SlGraph className='unit_icon' /> : {current?.Mode || 'New Launch'}</p>
                                         <p><FaHome className='unit_icon' /> : {current?.Possession || 'TBD'}</p>
                                     </div>
@@ -149,7 +173,7 @@ export default function Residential() {
 
                                             const hasPenthouse = !!current.Penthouse;
 
-                                            if (bhkValues.length === 0 && !hasPenthouse) return <h3>N/A</h3>;
+                                            if (bhkValues.length === 0 && !hasPenthouse) return <p><FaBed className='unit_icon' /> : N/A</p>;
 
                                             const min = Math.min(...bhkValues);
                                             const max = Math.max(...bhkValues);
@@ -170,9 +194,9 @@ export default function Residential() {
                                             return <p><FaBed className='unit_icon' /> : {displayText}</p>;
                                         })()}
                                         <p><MdPhotoSizeSelectSmall className='unit_icon' /> : {
-                                            current?.Carpet_Area_3bhk || current?.Carpet_Area_2bhk || 'Size N/A'
+                                            current?.Built || current?.Built || 'N/A'
                                         }</p>
-                                        <p><FaCar className='unit_icon' /> : {current?.Garages || 'Basement Parking'}</p>
+                                        <p><FaCar className='unit_icon' /> : {current?.Garages || 'N/A'} Level Basement</p>
                                     </div>
                                 </div>
 
