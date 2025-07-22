@@ -238,7 +238,6 @@ li .dropdown {
         grid-template-columns: 85% 0 10%;
         width: 100%;
         background-color: white;
-        border: 1px solid;
     }
 
     .rk_logo {
