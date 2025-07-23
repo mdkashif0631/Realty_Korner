@@ -31,7 +31,7 @@ const FeaturedProjectsCarousel = () => {
     fetch(`${BASE_URL}/properties`)
       .then(res => res.json())
       .then(data => {
-        console.log("Fetched properties:", data);
+        // console.log("Fetched properties:", data);
         setProperties(data);
       })
       .catch(err => console.error("Error fetching properties:", err));
@@ -49,7 +49,7 @@ const FeaturedProjectsCarousel = () => {
 
         {properties.length > 0 ? (
           <Carousel interval={null} className='feartureCard'>
-            {properties.map((proj, index) => (
+            {properties.slice().reverse().map((proj, index) => (
               <Carousel.Item key={index} className='featureCarditem'>
                 <div className="featuredProjtDetail">
                   <div className='featureimage'>

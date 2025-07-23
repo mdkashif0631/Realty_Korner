@@ -26,7 +26,12 @@ const PropertyCardTemplate = ({ property }) => (
         onError={(e) => e.target.src = '../img/img1.jpg'}
       />
       <div className="reraWrapper">
-        <p className="reraTag">RERA No: {property.Our_Rera_Number || "N/A"}</p>
+        <p className="rera-tooltip" style={{color:'white', fontWeight:'400', fontSize:'10px'}}>
+              RERA Verified 
+              <span className="tooltip-text">
+                { property?.Developer_Rera_No || "Not Available"}
+              </span>
+            </p>
       </div>
       <div className='logoImage'>
         <img

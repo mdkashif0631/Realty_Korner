@@ -230,7 +230,7 @@ const ProjectHeader = ({ project }) => {
                     </div>
 
                     <div id="bank" className='bank-part'>
-                        <h2>Bank Offers</h2>
+                        <h2>Approved By Bank</h2>
                         <BankSection />
                     </div>
 

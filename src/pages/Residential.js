@@ -116,7 +116,13 @@ export default function Residential() {
 
                                 <h2 className="project-title">{current?.Project_Name}</h2>
                                 <p className="location">At {current?.Location} by {current?.Developer_Name}</p>
-                                <div className="rera-tag">RERA Verified</div>
+                                <div className="rera-tag">
+                                    <p className="rera-tooltip">
+                                    RERA Verified
+                                    <span className="tooltip-text">
+                                        {current?.Developer_Rera_No || "Not Available"}
+                                    </span>
+                                </p></div>
 
                                 <div className="price">
                                     <h3 className="price-label">₹ </h3>
@@ -129,32 +135,32 @@ export default function Residential() {
                                 <div className="details">
                                     <div className='left_Detail'>
                                         {(() => {
-                                                const builtUpMap = [
-                                                  current.Super_Area_2bhk,
-                                                  current.Super_Area_3bhk,
-                                                  current.Super_Area_4bhk,
-                                                  current.Super_Area_5bhk,
-                                                  current.Super_Area_Penthouse
-                                                ];
-                                        
-                                                // Filter out empty strings and non-numeric values
-                                                const builtUpValues = builtUpMap
-                                                  .filter(area => area && area !== "")
-                                                  .map(area => parseFloat(area))
-                                                  .filter(area => !isNaN(area));
+                                            const builtUpMap = [
+                                                current.Super_Area_2bhk,
+                                                current.Super_Area_3bhk,
+                                                current.Super_Area_4bhk,
+                                                current.Super_Area_5bhk,
+                                                current.Super_Area_Penthouse
+                                            ];
 
-                                                  if (builtUpValues.length === 0) return <p><BiSolidArea className='unit_icon' /> : N/A</p>;
-                                        
-                                        
-                                                const min = Math.min(...builtUpValues);
-                                                const max = Math.max(...builtUpValues);
-                                        
-                                                const displaySuperArea =
-                                                  min === max ? `${min} sq.ft` : `${min} - ${max} sq.ft`;
-                                        
-                                                return <p >
-                                                  <BiSolidArea className='unit_icon' />:  {displaySuperArea}</p>;
-                                              })()}
+                                            // Filter out empty strings and non-numeric values
+                                            const builtUpValues = builtUpMap
+                                                .filter(area => area && area !== "")
+                                                .map(area => parseFloat(area))
+                                                .filter(area => !isNaN(area));
+
+                                            if (builtUpValues.length === 0) return <p><BiSolidArea className='unit_icon' /> : N/A</p>;
+
+
+                                            const min = Math.min(...builtUpValues);
+                                            const max = Math.max(...builtUpValues);
+
+                                            const displaySuperArea =
+                                                min === max ? `${min} sq.ft` : `${min} - ${max} sq.ft`;
+
+                                            return <p >
+                                                <BiSolidArea className='unit_icon' />:  {displaySuperArea}</p>;
+                                        })()}
                                         <p><SlGraph className='unit_icon' /> : {current?.Mode || 'New Launch'}</p>
                                         <p><FaHome className='unit_icon' /> : {current?.Possession || 'TBD'}</p>
                                     </div>
@@ -212,7 +218,7 @@ export default function Residential() {
                                     className={`thumbnail-wrapper ${index === activeIndex ? 'with-shadow' : ''}`}
                                     onClick={() => {
                                         setActiveIndex(index);
-                                        setSeconds(0); 
+                                        setSeconds(0);
                                     }}
                                 >
                                     <img

@@ -68,9 +68,9 @@ const PropertySticker = () => {
             <Carousel.Item key={idx}>
               <Container className="my-1 p-1">
                 <Row>
-                  {group.map((property, i) => (
+                  {group.slice().reverse().map((property, i) => (
                     <Col key={i} xs={12} sm={6} md={12 / chunkSize}>
-                      <PropertyCardTemplate property={property} baseUrl={BASE_URL} />
+                      <PropertyCardTemplate property={property}/>
                     </Col>
                   ))}
                 </Row>

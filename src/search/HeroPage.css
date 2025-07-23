@@ -343,6 +343,7 @@
     grid-template-rows: auto 415px;
     height: auto;
     width: 98%;
+    margin-top: 0%;
     
   }
   .test-hero-container {

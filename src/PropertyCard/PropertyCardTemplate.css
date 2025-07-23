@@ -56,13 +56,11 @@
     border: 1px solid #e0dfdfb3; */
 
 }
-
-.stickerimages .reraTag {
+.reraWrapper{
     text-align: end;
     position: absolute;
     bottom: 5px;
     right: 5px;
-    width: fit-content;
     background-color: #717070b9;
     font-size: 10px;
     font-weight: 400;
@@ -70,6 +68,8 @@
     border-radius: 50px;
     color: white;
 }
+
+
 
 .viewOfferButton a{
     height: 100%;
