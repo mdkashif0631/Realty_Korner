@@ -1,0 +1,77 @@
+.developer-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  font-family: sans-serif;
+  margin: 1rem 0rem;
+}
+
+.developer-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  width: 200px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.developer-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.5rem;
+}
+
+.developer-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.developer-link {
+  font-size: 0.9rem;
+  color: #2763ff;
+  text-decoration: none;
+  &:hover{
+    color: #5e5e5e;
+  }
+}
+
+.developer-info {
+  flex: 1;
+}
+
+.developer-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.developer-stats div {
+  text-align: center;
+}
+
+.developer-stats strong {
+  font-size: 1.2rem;
+}
+
+.developer-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.read-more {
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  &:hover{
+    color: #545454;
+  }
+}
+@media screen and (max-width: 960px) {
+  .developer-container {
+ flex-direction: column;
+ align-items: center;
+}
+}

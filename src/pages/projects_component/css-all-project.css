@@ -1,0 +1,38 @@
+.project-container{
+    height: auto;
+    width: 100%;
+    margin: 2rem 0rem;
+    
+}
+.project-box{
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 3rem 0rem;
+    border: .5px solid #c3c3c3cf;
+    /* background: linear-gradient(to top, rgb(255, 255, 255), rgb(40, 177, 232)); */
+}
+.project-header{
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(34, 176, 232); */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1rem;
+}
+.project-header h2{
+    /* margin: auto;
+    width: 80%; */
+    color: #2c5282;
+
+}
+@media screen and (max-width: 1200px) {
+    .project-box{
+    width: 97.5%;
+    margin: auto;
+    /* background: linear-gradient(to top, rgb(255, 255, 255), rgb(40, 177, 232)); */
+}
+}

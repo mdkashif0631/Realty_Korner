@@ -1,0 +1,207 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.admin-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #a9a8a8bf;
+  border-radius: 6px;
+  outline: none;
+}
+
+form select {
+  background: white;
+}
+
+form .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+form .buttons button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form .buttons button:hover {
+  background-color: #2b6cb0;
+}
+
+.amenities-add-category {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #2c5282;
+  display: flex;
+  align-items: center;
+}
+
+h4 svg {
+  margin-right: 0.5rem;
+  color: #4fd1c5;
+}
+
+label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+.beds_box{
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #acacacba;
+  border-radius: 10px;
+}
+.beds_category{
+  display: grid;
+  grid-template-columns: 200px auto;
+  text-align: left;
+  margin: 5px;
+}
+.beds_category input{
+  border: 1px solid #a9a8a8bf;
+
+}
+.beds_input{
+width: 20px;
+}
+.project_images{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.beds_box {
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.beds_category {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.beds_category label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.beds_category input[type="text"],
+.beds_category input[type="file"],
+.beds_input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.beds_category input[type="text"]:focus,
+.beds_input:focus {
+  border-color: #007bff;
+}
+
+.beds_input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.addPropertybtn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.addPropertybtn:hover {
+  background-color: #0056b3;
+}
+
+.box_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove_btn {
+  background-color: #2763ff;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.remove_btn:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,303 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+.letMeHelpContainer {
+    width: 100%;
+    height: auto;
+    /* margin: 3rem 0rem; */
+    /* padding: 1rem 0rem 0rem 0rem; */
+    /* border: 2px solid #333; */
+
+}
+
+.let_me_help_content_part1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    width: 80%;
+    margin: 3rem auto;
+    /* border: 5px solid #333; */
+    /* padding-bottom: 2rem; */
+}
+
+.helpLeft {
+    display: flex;
+    justify-content: center;
+    padding-top: .5rem;
+
+}
+
+.help_left_content {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 380px;
+    height: 380px;
+    max-width: 380px;
+    max-height: 380px;
+    border: 10px solid #333;
+    position: relative;
+    background-color: white;
+    padding: 1rem;
+}
+
+.top_square {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to left, rgb(153, 213, 237), #2763ff);
+    z-index: -1;
+}
+
+.bottom_square {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, rgb(153, 213, 237), #2763ff);
+    z-index: -1;
+}
+
+.help_left_content h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #2763ff;
+}
+
+.help_left_content h1 span {
+    color: rgb(0, 0, 0);
+}
+
+.helpRight {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+}
+
+.help_right_content {
+    display: grid;
+    /* justify-content: center; */
+    grid-template-rows: auto;
+    /* gap: 10px; */
+}
+
+.help_right_content p {
+    
+    padding-left: 1rem;
+    font-size: 16px;
+    margin-bottom: 0rem;
+    /* border: 2px solid #333; */
+}
+
+.help_right_content h2 {
+    font-size: 40px;
+    font-weight: 600;
+    padding-left: 1rem;
+    /* border: 2px solid #333; */
+    margin-bottom: 1rem;
+
+}
+
+.let_me_help_content_part2 {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    width: 100%;
+    /* margin: 3rem auto; */
+    /* border: 5px solid #333; */
+    height: auto;
+}
+
+.btn_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #333; */
+}
+
+.btn_heading h1 {
+    color: rgb(0, 0, 0);
+    height: auto;
+    padding-bottom: 2px;
+    /* border-bottom: 2px solid;
+    border-image: linear-gradient(to left, rgb(72, 180, 222), rgb(33, 28, 132));
+    border-image-slice: 1; */
+}
+
+.btn_container {
+    width: 80%;
+    margin: 1rem auto;
+    gap: 30px;
+    height: auto;
+    /* border: 1px solid #333; */
+}
+
+.btn_box_detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    height: auto;
+}
+
+.s_p_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #cbcbcb;
+    overflow: hidden;
+}
+
+.btn_container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 0px 10px;
+    font-size: 20px;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(to left, rgb(72, 180, 222), #2763ff);
+    height: 48px;
+
+    /* border-radius: 10px; */
+}
+
+.btn_container .dropdown_s_p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+    /* background-color: rgb(232, 232, 232); */
+    color: #4a4a4a;
+    font-size: 14px;
+    height: 100%;
+    padding: 5px 20px;
+}
+
+
+.btn_container .popup_icon {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 950px) {
+    .let_me_help_content_part1 {
+        grid-template-columns:none;
+        grid-template-rows: auto auto;
+        /* width: 95%; */
+        padding-bottom: 0rem;
+        /* border: 2px solid #333; */
+    }
+
+    .helpLeft {
+        padding-bottom: .5rem;
+
+    }
+
+    .help_left_content {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        min-width: 200px;
+        width: 200px;
+        min-height: 200px;
+        height: 200px;
+        border: 10px solid #333;
+        position: relative;
+        background-color: white;
+        padding: 1rem;
+    }
+    .help_left_content h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(33, 28, 132);
+    }
+
+    .top_square {
+    width: 120px;
+    height: 120px;
+     top: -20px;
+    left: -20px;
+}
+
+.bottom_square {
+    width: 120px;
+    height: 120px;
+     bottom: -20px;
+    right: -20px;
+}
+    .help_right_content {
+    /* align-items: center; */
+    /* border: 2px solid #333; */
+
+    /* gap: 10px; */
+}
+    .help_right_content h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* text-align: center; */
+    font-size: 30px;
+    font-weight: 600;
+    /* border: 2px solid #333; */
+    margin-bottom: 5px;
+
+}
+.let_me_help_content_part2 {
+    display: grid;
+    grid-template-rows: auto;
+    width: 100%;
+    /* border: 5px solid #333; */
+}
+.btn_container {
+    width: 80%;
+    margin: 0rem auto;
+    gap: 30px;
+    /* border: 1px solid #333; */
+    /* padding-left: 1rem; */
+    height: auto;
+}
+.btn_box_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    height: auto;
+}
+.btn_heading h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2px;
+    border: none;
+    /* border-bottom: 2px solid; */
+    /* border-image: linear-gradient(to left, rgb(72, 180, 222), rgb(33, 28, 132)); */
+    /* border-image-slice: 1; */
+}
+.s_p_btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid #cbcbcb;
+    overflow: hidden;
+}
+    
+}

@@ -1,0 +1,52 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.stickerheadline {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: auto;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.stickerheadline h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.stickerheadline p {
+    margin-bottom: 0px;
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 0px;
+
+}
+
+@media screen and (max-width: 980px) {
+    .stickerheadline {
+    grid-template-rows: 1fr 2fr;
+    /* border: 2px solid #333; */
+    /* margin: 1.5rem 0rem 2rem 0rem; */
+}
+.stickerheadline h1 {
+    font-weight: 600;
+        /* border: 2px solid #333; */
+    }
+    
+    .stickerheadline p {
+        /* border: 2px solid #333; */
+        width: 98%;
+        font-size: 12px;
+    }
+
+}

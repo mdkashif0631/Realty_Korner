@@ -1,0 +1,79 @@
+.amenities-container {
+    text-align: left;
+    box-shadow: 0 0 4px rgb(187, 185, 185);
+    border-radius: 10px ;
+    padding: 1rem 1rem;
+}
+.amenities-container h4{
+    text-align: left;
+}
+.amenities-category{
+    margin-bottom: 1rem;
+    width: 100%;
+    margin: 1rem 0rem;
+    color: #2c5282;
+
+}
+.category-title{
+    margin-bottom: .5rem;
+    font-size: 16px;
+}
+.amenities-fle {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0rem auto;
+  padding: 0rem 4px;
+}
+@media screen and (max-width: 1100px) {
+  .amenities-fle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 1fr; */
+  overflow-x: auto;
+  margin: 0rem auto;
+  padding: 5px;
+}  
+}
+
+.amenity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    min-width: 18%;
+    border-radius: 10px ;
+    box-shadow: 0 0 6px rgb(198, 197, 197);
+}
+
+.amenity-icon {
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+
+
+.amenity-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.show-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.show-more-btn:hover {
+    background-color: #f0f0f0;
+}

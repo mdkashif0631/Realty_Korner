@@ -1,0 +1,380 @@
+.h_s_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+  margin: 3rem auto;
+  height: auto;
+  position: relative;
+  /* border: 4px solid #333; */
+}
+.test-hero-container {
+  /* padding: 50px 20px; */
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  /* border: 2px solid #0d03c1; */
+  margin-top: 2rem;
+  margin-bottom: 195px;
+}
+
+.test-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.test-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.test-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: #2763ff;
+  left: 0;
+  bottom: 0;
+  border-radius: 30px;
+  transform: rotate(-1.5deg);
+  z-index: -1;
+}
+
+.test-hero-subtitle {
+  color: #888;
+  font-size: 16px;
+  /* max-width: 650px; */
+  margin-bottom: 35px;
+}
+
+.test-hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.test-discover-btn {
+  padding: 12px 24px;
+  background: #2763ff;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.test-discover-btn:hover {
+  background: #ffffff;
+  color: #2763ff;
+  border: 1px solid #2763ff;
+}
+
+.watch-story {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.play-circle {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.play-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
+
+
+.support-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  /* border: 5px solid #680000; */
+
+}
+
+/* Background main image */
+.background-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Floating preview circles */
+.floating-image {
+  position: absolute;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.floating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floating-image.top {
+  top: 110px;
+}
+
+.floating-image.bottom {
+  top: 210px;
+}
+
+/* Top-right support box */
+.support-box {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: #ffffff96;
+  padding: 16px 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 130px;
+}
+
+.support-icon {
+  color: #dc3545;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.support-box h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.support-box p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+
+/* Container */
+.test-check-availability-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  position: absolute;
+  bottom: 0px;
+  left: 30%;
+  transform: translate(-30%);
+  z-index: 10;
+  /* border: 2px solid #16ce29; */
+
+}
+
+/* Title */
+.check-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Main Search Bar */
+.test-search-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+  gap: 15px;
+  position: relative;
+}
+
+/* Each Field Block */
+.test-search-field {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px 15px;
+  flex: 1;
+  gap: 10px;
+  position: relative;
+}
+
+/* Icons */
+.icon {
+  font-size: 18px;
+  color: #2763ff;
+  margin-top: 5px;
+}
+
+/* Label + Input wrapper */
+.test-input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+/* Input labels */
+.test-input-group label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+/* Input fields */
+.test-input-group input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Search button */
+.test-search{
+  width: 5px;
+  height: 30px;
+  position: relative;
+  /* border: 2px solid #333; */
+}
+.test-search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2763ff;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  top: -12px;
+  right: -44px;
+  /* transform: translate(-50% 50%) */
+}
+
+.test-search-button:hover {
+  background-color: #4317c4;
+}
+
+/* Dropdown box */
+.test-dropdown {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 999;
+  padding: 0;
+  margin: 4px 0 0 0;
+  list-style: none;
+}
+
+/* Dropdown list items */
+.test-dropdown li {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.test-dropdown li:hover {
+  background-color: #f3f3f3;
+}
+
+/* Optional Scrollbar Styling */
+.test-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.test-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+
+@media screen and (max-width: 980px){
+  .h_s_container{
+    grid-template-columns: none;
+    grid-template-rows: auto 415px;
+    height: auto;
+    width: 98%;
+    margin-top: 0%;
+    
+  }
+  .test-hero-container {
+    width: 90%;
+  margin: 2rem auto;
+}
+  .test-check-availability-container {
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.test-search-bar {
+  flex-direction: column;
+}
+.test-search-field{
+  width: 100%
+}
+.test-search{
+  width: 50px;
+  height: 50px;
+  /* border: 2px solid #333; */
+}
+.test-search-button {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  /* transform: translate(-50% 50%) */
+}
+.support-container {
+  display: none;
+
+}
+
+}

@@ -1,0 +1,136 @@
+.contact-section {
+  width: 100%;
+  margin-bottom: 3rem;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* border: 2px solid #333; */
+
+}
+
+.contact-left {
+  /* flex: 1; */
+  width: 60%;
+  height: 100%;
+  /* border: 2px solid #333; */
+}
+
+.contact-left h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #2763ff;
+  margin-bottom: 30px;
+}
+
+.contact-left p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.contact-left h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.help-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 30px;
+}
+
+.help-item {
+  display: flex;
+  gap: 15px;
+  max-width: 300px;
+}
+
+.help-icon {
+  font-size: 28px;
+}
+
+.help-item h4 {
+  margin: 0 0 5px;
+}
+
+.help-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+.help-item a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #2763ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-form-container {
+  background-color: #f3f6f7;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  width: 30%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #dfe4e6;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #2763ff;
+  color: white;
+  padding: 14px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: white;
+  color: #2763ff;
+  border: 1px solid #2763ff;
+}
+
+@media screen and (max-width: 980px) {
+  .contact-container{
+    flex-direction: column;
+    width: 95%;
+  }
+  .contact-left{
+    width: 100%;
+  }
+  .contact-form-container {
+  background-color: #f3f6f7;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 95%;
+}
+  
+}
