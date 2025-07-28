@@ -13,7 +13,7 @@ const ProjectHeader = ({ project }) => {
         {
             key: `${project.Beds_bhk} Bhk`,
             beds: project.Beds_bhk,
-            expected: "2",
+            expected: true,
             superArea: project.Super_Area_bhk,
             builtupArea: project.Built_Up_Area_bhk,
             carpetArea: project.Carpet_Area_bhk,
@@ -22,7 +22,7 @@ const ProjectHeader = ({ project }) => {
         {
             key:`${project.Beds_bhk1} Bhk`,
             beds: project.Beds_bhk1,
-            expected: "3",
+            expected: true,
             superArea: project.Super_Area_bhk1,
             builtupArea: project.Built_Up_Area_bhk1,
             carpetArea: project.Carpet_Area_bhk1,
@@ -31,7 +31,7 @@ const ProjectHeader = ({ project }) => {
         {
             key: `${project.Beds_bhk2} Bhk`,
             beds: project.Beds_bhk2,
-            expected: "4",
+            expected: true,
             superArea: project.Super_Area_bhk2,
             builtupArea: project.Built_Up_Area_bhk2,
             carpetArea: project.Carpet_Area_bhk2,
@@ -40,7 +40,7 @@ const ProjectHeader = ({ project }) => {
         {
             key: `${project.Beds_bhk3} Bhk`,
             beds: project.Beds_bhk3,
-            expected: "5",
+            expected: true,
             superArea: project.Super_Area_bhk3,
             builtupArea: project.Built_Up_Area_bhk3,
             carpetArea: project.Carpet_Area_bhk3,
@@ -74,7 +74,6 @@ const ProjectHeader = ({ project }) => {
                 }
             ])
     );
-
     const [isSticky, setIsSticky] = useState(false);
     const [activeTab, setActiveTab] = useState('Unit Plan');
     const [activenav, setActivenav] = useState('overview');
