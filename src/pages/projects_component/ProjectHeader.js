@@ -10,70 +10,66 @@ import EnquiryForm from '../../component/EnquiryForm';
 
 const ProjectHeader = ({ project }) => {
     const bhkTypes = [
-        {
-            key: `${project.Beds_bhk} Bhk`,
-            beds: project.Beds_bhk,
-            expected: "2",
-            superArea: project.Super_Area_bhk,
-            builtupArea: project.Built_Up_Area_bhk,
-            carpetArea: project.Carpet_Area_bhk,
-            img: project.Floor_Plan_bhk,
-        },
-        {
-            key:`${project.Beds_bhk1} Bhk`,
-            beds: project.Beds_bhk1,
-            expected: "3",
-            superArea: project.Super_Area_bhk1,
-            builtupArea: project.Built_Up_Area_bhk1,
-            carpetArea: project.Carpet_Area_bhk1,
-            img: project.Floor_Plan_bhk1,
-        },
-        {
-            key: `${project.Beds_bhk2} Bhk`,
-            beds: project.Beds_bhk2,
-            expected: "4",
-            superArea: project.Super_Area_bhk2,
-            builtupArea: project.Built_Up_Area_bhk2,
-            carpetArea: project.Carpet_Area_bhk2,
-            img: project.Floor_Plan_bhk2,
-        },
-        {
-            key: `${project.Beds_bhk3} Bhk`,
-            beds: project.Beds_bhk3,
-            expected: "5",
-            superArea: project.Super_Area_bhk3,
-            builtupArea: project.Built_Up_Area_bhk3,
-            carpetArea: project.Carpet_Area_bhk3,
-            img: project.Floor_Plan_bhk3,
-        },
-        {
-            key: "Penthouse",
-            beds: project.Penthouse,
-            expected: true,
-            superArea: project.Super_Area_Penthouse,
-            builtupArea: project.Built_Up_Area_Penthouse,
-            carpetArea: project.Carpet_Area_Penthouse,
-            img: project.Floor_Plan_Penthouse,
-        }
-    ];
+    {
+        key: `${project.Beds_bhk} BHK`,
+        beds: project.Beds_bhk,
+        superArea: project.Super_Area_bhk,
+        builtupArea: project.Built_Up_Area_bhk,
+        carpetArea: project.Carpet_Area_bhk,
+        img: project.Floor_Plan_bhk,
+    },
+    {
+        key: `${project.Beds_bhk1} BHK`,
+        beds: project.Beds_bhk1,
+        superArea: project.Super_Area_bhk1,
+        builtupArea: project.Built_Up_Area_bhk1,
+        carpetArea: project.Carpet_Area_bhk1,
+        img: project.Floor_Plan_bhk1,
+    },
+    {
+        key: `${project.Beds_bhk2} BHK`,
+        beds: project.Beds_bhk2,
+        superArea: project.Super_Area_bhk2,
+        builtupArea: project.Built_Up_Area_bhk2,
+        carpetArea: project.Carpet_Area_bhk2,
+        img: project.Floor_Plan_bhk2,
+    },
+    {
+        key: `${project.Beds_bhk3} BHK`,
+        beds: project.Beds_bhk3,
+        superArea: project.Super_Area_bhk3,
+        builtupArea: project.Built_Up_Area_bhk3,
+        carpetArea: project.Carpet_Area_bhk3,
+        img: project.Floor_Plan_bhk3,
+    },
+    {
+        key: "Penthouse",
+        beds: project.Penthouse,
+        superArea: project.Super_Area_Penthouse,
+        builtupArea: project.Built_Up_Area_Penthouse,
+        carpetArea: project.Carpet_Area_Penthouse,
+        img: project.Floor_Plan_Penthouse,
+    }
+];
 
-    const configurationsData = Object.fromEntries(
-        bhkTypes
-            .filter(item =>
-                item.key === "Penthouse"
-                    ? !!item.beds
-                    : item.beds === item.expected
-            )
-            .map(item => [
-                item.key,
-                {
-                    superArea: item.superArea,
-                    builtupArea: item.builtupArea,
-                    carpetArea: item.carpetArea,
-                    img: item.img ? `${item.img}` : ''
-                }
-            ])
-    );
+const configurationsData = Object.fromEntries(
+    bhkTypes
+        .filter(item =>
+            item.key === "Penthouse"
+                ? !!item.beds // only truthy value for penthouse
+                : item.beds !== undefined && item.beds !== null && item.beds !== '' // exclude empty bhk values
+        )
+        .map(item => [
+            item.key,
+            {
+                superArea: item.superArea,
+                builtupArea: item.builtupArea,
+                carpetArea: item.carpetArea,
+                img: item.img || ''
+            }
+        ])
+);
+
     const [isSticky, setIsSticky] = useState(false);
     const [activeTab, setActiveTab] = useState('Unit Plan');
     const [activenav, setActivenav] = useState('overview');
