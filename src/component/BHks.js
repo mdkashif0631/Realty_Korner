@@ -28,7 +28,7 @@ const BHks = ({ property }) => {
   
           if (filteredBHKs.length === 0 && !hasPenthouse) return <span>N/A</span>;
   
-          const bhkText = filteredBHKs.length > 0 ? `${filteredBHKs.join(" / ")} Bhk` : null;
+          const bhkText = filteredBHKs.length > 0 ? `${filteredBHKs.join(" / ")} BHK` : null;
   
           const displayText = hasPenthouse
             ? bhkText
