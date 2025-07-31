@@ -8,15 +8,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './FeaturedProjectsCarousel.css';
 import BHks, { SuperAreaDisplay } from '../component/BHks';
 
+// 🔁 Custom hook to detect screen width
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return width;
+}
+
 function Price({ max_price, min_price }) {
   return (
     <h2 className="fw" style={{ color: "black" }}>
       {max_price === "Onwards"
-        ? `₹ ${(min_price / 10000000)?.toFixed(2).toString().slice(0, 4) } Cr ${max_price}`
+        ? `₹ ${(min_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr ${max_price}`
         : `₹ ${(min_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr - ₹ ${(max_price / 10000000)?.toFixed(2).toString().slice(0, 4)} Cr`}
     </h2>
   );
 }
+
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 const slugify = (name) => {
@@ -25,8 +39,16 @@ const slugify = (name) => {
 
 const FeaturedProjectsCarousel = () => {
   const [properties, setProperties] = useState([]);
+  const width = useWindowWidth(); // ⬅️ Get screen width
+  const descLimit = width < 700 ? 150 : 300;
 
-  // Set base URL for backend API and image path
+  // Description formatter with word cutoff
+  const getShortDescription = (desc) => {
+    if (!desc) return 'No description available';
+    return desc.length > descLimit
+      ? desc.substring(0, desc.lastIndexOf(' ', descLimit)) + '...'
+      : desc;
+  };
 
   useEffect(() => {
     fetch(`${BASE_URL}/properties`)
@@ -85,18 +107,18 @@ const FeaturedProjectsCarousel = () => {
                     />
 
                     <p className="text-justify">
-                      {proj.Description ? (proj.Description.length > 300 ? proj.Description.substring(0, 300) + '...' : proj.Description) : 'No description available'}
+                      {getShortDescription(proj.Description)}
                     </p>
 
                     <div className='moredetail'>
                       <div className='LeftDetail'>
-                        <p><FaBed className='uniticon' /> Unit Type : <BHks property={proj}/></p>
+                        <p><FaBed className='uniticon' /> Unit Type : <BHks property={proj} /></p>
                         <p><BiSolidArea className='uniticon' /> Project Size : {proj.Built || "N/A"} Acre</p>
-                        <p><MdPhotoSizeSelectSmall className='uniticon' /> Unit Sizes : <SuperAreaDisplay property={proj}/></p>
+                        <p><MdPhotoSizeSelectSmall className='uniticon' /> Unit Sizes : <SuperAreaDisplay property={proj} /></p>
                       </div>
                       <div className='rightDetail'>
-                        <p><FaCar className='uniticon' /> Parking : {proj.Garages || "3 Level Basement"}</p>
-                        <p><SlGraph className='uniticon' /> Current Status : {proj.Mode || "New launch"}</p>
+                        <p><FaCar className='uniticon' /> Parking : {(proj.Garages || "3 Level Basement").slice(0, 14)}...</p>
+                        <p><SlGraph className='uniticon' /> Curr. Status : {(proj.Mode || "New launch").slice(0,12)}...</p>
                         <p><FaHome className='uniticon' /> Possession : {proj.Possession || "TBD"}</p>
                       </div>
                     </div>
