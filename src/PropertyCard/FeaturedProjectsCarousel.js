@@ -119,7 +119,7 @@ const FeaturedProjectsCarousel = () => {
                       <div className='rightDetail'>
                         <p><FaCar className='uniticon' /> Parking : {(proj.Garages || "3 Level Basement").slice(0, 14)}...</p>
                         <p><SlGraph className='uniticon' /> Curr. Status : {(proj.Mode || "New launch").slice(0,12)}...</p>
-                        <p><FaHome className='uniticon' /> Possession : {proj.Possession || "TBD"}</p>
+                        <p><FaHome className='uniticon' /> Possession : {(proj.Possession || "TBD").slice(0,3)}... {(proj.Possession || "TBD").slice(-4)}</p>
                       </div>
                     </div>
 
