@@ -305,7 +305,7 @@
 
     .featuredProjtDetail {
         grid-template-columns: none;
-        grid-template-rows: 300px 1fr;
+        grid-template-rows: 280px 350px;
         width: 100%;
         /* border: 1px solid #333; */
         gap: 1rem;
