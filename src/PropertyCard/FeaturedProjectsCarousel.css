@@ -275,8 +275,6 @@
 
 }
 
-.readmorebutton button {}
-
 .carousel-control-next-icon {
     display: none;
 }
@@ -290,6 +288,7 @@
     .featureBox {
         grid-template-rows: none;
         width: 95%;
+        gap:10px;
     }
 
     .feartureCard {
@@ -305,7 +304,7 @@
 
     .featuredProjtDetail {
         grid-template-columns: none;
-        grid-template-rows: 280px 350px;
+        grid-template-rows: 280px auto;
         width: 100%;
         /* border: 1px solid #333; */
         gap: 1rem;
@@ -329,7 +328,7 @@
         height: 100%;
         /* border: 2px solid #000000; */
         padding-left: 0px;
-        gap: 16px;
+        gap: 10px;
 
     }
 
