@@ -340,7 +340,7 @@
 @media screen and (max-width: 980px){
   .h_s_container{
     grid-template-columns: none;
-    grid-template-rows: auto 415px;
+    grid-template-rows: auto 350px;
     height: auto;
     width: 98%;
     margin-top: 0%;
@@ -349,6 +349,14 @@
   .test-hero-container {
     width: 90%;
   margin: 2rem auto;
+}
+
+.test-hero-title {
+  font-size: 30px;
+ 
+}
+.test-input-group label{
+  display: none;
 }
   .test-check-availability-container {
   width: 100%;
