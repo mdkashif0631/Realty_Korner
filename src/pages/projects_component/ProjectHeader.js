@@ -27,7 +27,7 @@ const ProjectHeader = ({ project }) => {
             img: project.Floor_Plan_bhk1,
         },
         {
-            key: `${project.Beds_bhk2?.toString().trim().slice(0, 1)} BHK${project.Additional_Room2 ? ' + ' + project.Additional_Room2.trim()+')' : ''}`,
+            key: `${project.Beds_bhk2?.toString().trim().slice(0, 1)} BHK${project.Additional_Room2 ? ' + (' + project.Additional_Room2.trim()+')' : ''}`,
             beds: project.Beds_bhk2,
             superArea: project.Super_Area_bhk2,
             builtupArea: project.Built_Up_Area_bhk2,
@@ -35,7 +35,7 @@ const ProjectHeader = ({ project }) => {
             img: project.Floor_Plan_bhk2,
         },
         {
-            key: `${project.Beds_bhk3?.toString().trim().slice(0, 1)} BHK${project.Additional_Room3 ? ' + ' + project.Additional_Room3.trim()+')' : ''}`,
+            key: `${project.Beds_bhk3?.toString().trim().slice(0, 1)} BHK${project.Additional_Room3 ? ' + (' + project.Additional_Room3.trim()+')' : ''}`,
             beds: project.Beds_bhk3,
             superArea: project.Super_Area_bhk3,
             builtupArea: project.Built_Up_Area_bhk3,
@@ -43,7 +43,7 @@ const ProjectHeader = ({ project }) => {
             img: project.Floor_Plan_bhk3,
         },
         {
-            key: `${project.Beds_bhk4?.toString().trim().slice(0, 1)} BHK${project.Additional_Room4 ? ' + ' + project.Additional_Room4.trim()+')' : ''}`,
+            key: `${project.Beds_bhk4?.toString().trim().slice(0, 1)} BHK${project.Additional_Room4 ? ' + (' + project.Additional_Room4.trim()+')' : ''}`,
             beds: project.Beds_bhk4,
             superArea: project.Super_Area_bhk4,
             builtupArea: project.Built_Up_Area_bhk4,
@@ -51,7 +51,7 @@ const ProjectHeader = ({ project }) => {
             img: project.Floor_Plan_bhk4,
         },
         {
-            key: `${project.Beds_bhk5?.toString().trim().slice(0, 1)} BHK${project.Additional_Room5 ? ' + ' + project.Additional_Room5.trim()+')' : ''}`,
+            key: `${project.Beds_bhk5?.toString().trim().slice(0, 1)} BHK${project.Additional_Room5 ? ' + (' + project.Additional_Room5.trim()+')' : ''}`,
             beds: project.Beds_bhk5,
             superArea: project.Super_Area_bhk5,
             builtupArea: project.Built_Up_Area_bhk5,
