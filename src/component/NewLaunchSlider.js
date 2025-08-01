@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./NewLaunchSlider.css";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
-import axios from "axios";
 import BHks from "./BHks";
 
 const BASE_URL = process.env.REACT_APP_API_URL;
@@ -18,18 +17,21 @@ const NewLaunchSlider = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}/properties`)
-      .then((res) => {
-        setProperties(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to load properties:", err);
-        setError("Error loading projects.");
-        setLoading(false);
-      });
-  }, []);
+      fetch(`${BASE_URL}/properties`)
+        .then(res => res.json())
+        .then(data => {
+          const filtered = data.filter(item =>
+            item.Project_status === "New Launch"
+          );
+          setProperties(filtered); // ← use filtered here
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.error("Failed to load properties:", err);
+          setError("Error loading projects.");
+          setLoading(false);
+        });
+    }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,15 +70,7 @@ const NewLaunchSlider = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
-  // const getBHKString = (project) => {
-  //   const bhks = [];
-  //   if (project.Beds_2bhk) bhks.push("2 BHK");
-  //   if (project.Beds_3bhk) bhks.push("3 BHK");
-  //   if (project.Beds_4bhk) bhks.push("4 BHK");
-  //   if (project.Beds_5bhk) bhks.push("5 BHK");
-  //   if (project.Penthouse) bhks.push("Penthouse");
-  //   return bhks.join(", ");
-  // };
+  
 
   return (
     <div className="new-slider-container">

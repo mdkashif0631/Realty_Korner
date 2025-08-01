@@ -250,13 +250,13 @@ const configurationsData = Object.fromEntries(
                             <div className='contact-company-name-add'>
                                 <h5>{project?.Project_Name
                                     ? project.Project_Name.split(" ").map((word, index) => (
-                                        <span key={index} style={{ marginRight: "4px" }}>
-                                            <span className="large-letter">{word.charAt(0)}</span>
+                                        <span key={index} style={{ marginRight: "4px", fontSize:'15px' }}>
+                                            <span style={{ fontSize:'20px'}} className="large-letter">{word.charAt(0)}</span>
                                             {word.slice(1)}
                                         </span>
                                     ))
                                     : "N/A"}</h5>
-                                <p>{`${project.Localities}, ${project.Location}, ${project.City}`}</p>
+                                <p style={{color:'#2763ff'}}>{`${project.Localities}, ${project.Location}, ${project.City}`}</p>
                             </div>
                         </div>
 

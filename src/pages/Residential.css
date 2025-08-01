@@ -151,6 +151,7 @@
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
+    box-shadow: 0 0 2px #bebebf;
 }
 
 .company-project-box {
@@ -160,6 +161,7 @@
 
 .project-company {
   /* border: 1px solid #333; */
+  text-transform: uppercase;
   font-size: 18px;
   margin: 0;
 }
@@ -177,6 +179,8 @@
   margin: .4rem 0px;
   line-height: 1;
   font-weight: 600;
+  text-transform: capitalize;
+
   /* border: 1px solid #333; */
 }
 

@@ -7,13 +7,23 @@
 }
 
 .developer-card {
-  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
   padding: 1rem;
-  border-radius: 12px;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
-  width: 200px;
+  width: 250px;
   text-align: center;
-  border: 1px solid #e0e0e0;
+  position: relative;
+  background-color: rgba(205, 203, 203, 0.655);
+}
+.bg_dev_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+
 }
 
 .developer-logo {
@@ -29,7 +39,7 @@
 
 .developer-link {
   font-size: 0.9rem;
-  color: #2763ff;
+  color: #000000;
   text-decoration: none;
   &:hover{
     color: #5e5e5e;

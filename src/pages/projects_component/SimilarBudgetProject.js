@@ -29,7 +29,10 @@ const SimilarBudgetProject = ({ project }) => {
         fetch(`${BASE_URL}${endpoint}`) // Update if backend URL changes
             .then(res => res.json())
             .then(data => {
-                const filtered = data.filter(item => item.Project_type === project.Project_type);
+                const filtered = data.filter(item => item.Project_type === project.Project_type &&
+                    (item.Start_price <= project.Start_price &&
+                    item.End_price >= project.End_price)
+                );
                 const chunks = [];
                 for (let i = 0; i < filtered.length; i += 4) {
                     chunks.push(filtered.slice(i, i + 4));
@@ -37,7 +40,7 @@ const SimilarBudgetProject = ({ project }) => {
                 setChunked(chunks);
             })
             .catch(err => console.error("Error fetching properties:", err));
-    }, [project.Project_type]);
+    }, [project.Project_type, project.Start_price, project.End_price]);
 
     return (
         <div className='project-container'>

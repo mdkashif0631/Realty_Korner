@@ -44,7 +44,7 @@ const PropertyCardTemplate = ({ property }) => (
     </div>
 
     <Card.Body>
-      <Card.Title style={{ color: "black", fontSize: "20px" }}>
+      <Card.Title style={{ color: "black", fontSize: "20px", textTransform: "capitalize" }}>
         {property.Project_Name || "No Name"}
       </Card.Title>
       <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: "12px" }}>

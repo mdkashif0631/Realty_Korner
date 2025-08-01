@@ -22,7 +22,7 @@ const NearByProject = ({ project }) => {
 
     // ✅ Fetch projects of same type & location
     useEffect(() => {
-        if (!project?.Project_type || !project?.Location) return;
+        if (!project?.Project_type || (!project?.Location && project?.Project_Name) ) return;
 
         let endpoint = '';
         if (project.Project_type === 'Commercial') {
@@ -38,13 +38,14 @@ const NearByProject = ({ project }) => {
             .then(data => {
                 const filtered = data.filter(item =>
                     item.Project_type === project.Project_type &&
-                    normalize(item.Location) === normalize(project.Location)
+                    (item.Project_Name !== project.Project_Name &&
+                    normalize(item.Location) === normalize(project.Location))
                 );
                 setAllProjects(filtered);
                 chunkProjects(filtered, cardsPerSlide);
             })
             .catch(err => console.error("Error fetching properties:", err));
-    }, [project.Project_type, project.Location, cardsPerSlide]);
+    }, [project.Project_type, project.Project_Name, project.Location, cardsPerSlide]);
 
     // ✅ Handle window resize for responsive layout
     useEffect(() => {

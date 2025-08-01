@@ -25,7 +25,9 @@ const LuxuryProject = ({ project }) => {
         fetch(`${BASE_URL}${endpoint}`) // Update if backend URL changes
             .then(res => res.json())
             .then(data => {
-                const filtered = data.filter(item => item.Project_type === project.Project_type);
+                const filtered = data.filter(item => item.Project_type === project.Project_type &&
+                    item.Project_tag.includes("Luxuray")
+                );
                 const chunks = [];
                 for (let i = 0; i < filtered.length; i += 4) {
                     chunks.push(filtered.slice(i, i + 4));

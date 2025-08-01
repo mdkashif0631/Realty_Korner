@@ -70,7 +70,7 @@ const FeaturedProjectsCarousel = () => {
         </div>
 
         {properties.length > 0 ? (
-          <Carousel interval={null} className='feartureCard'>
+          <Carousel interval={6000} className='feartureCard'>
             {properties.slice().reverse().map((proj, index) => (
               <Carousel.Item key={index} className='featureCarditem'>
                 <div className="featuredProjtDetail">
@@ -96,7 +96,14 @@ const FeaturedProjectsCarousel = () => {
                   <div className='featuredDetailcontainer'>
                     <div className='projectNameContainer'>
                       <div className="projectName">
-                        <h1>{proj.Project_Name || "Unnamed Project"}</h1>
+                        <h1>{proj?.Project_Name
+                                            ? proj.Project_Name.split(" ").map((word, index) => (
+                                                <span key={index} style={{ marginRight: "8px", fontSize:'24px' }}>
+                                                    <span style={{fontSize:'34px'}}>{word.charAt(0)}</span>
+                                                    {word.slice(1)}
+                                                </span>
+                                            ))
+                                            : "N/A"}</h1>
                         <h5>{`${proj.Localities}, ${proj.Location}, ${proj.City}` || "Unknown Location"}</h5>
                       </div>
                     </div>
@@ -118,7 +125,7 @@ const FeaturedProjectsCarousel = () => {
                       </div>
                       <div className='rightDetail'>
                         <p><FaCar className='uniticon' /> Parking : {(proj.Garages || "3 Level Basement").slice(0, 14)}...</p>
-                        <p><SlGraph className='uniticon' /> Curr. Status : {(proj.Mode || "New launch").slice(0,12)}...</p>
+                        <p><SlGraph className='uniticon' /> Curr. Status : {(proj.Mode || "New launch").slice(0,10)}...</p>
                         <p><FaHome className='uniticon' /> Possession : {(proj.Possession || "TBD").slice(0,3)}... {(proj.Possession || "TBD").slice(-4)}</p>
                       </div>
                     </div>

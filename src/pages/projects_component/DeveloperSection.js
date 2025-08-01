@@ -5,6 +5,7 @@ const DeveloperSection = ({ project }) => {
   return (
     <div className="developer-container">
       <div className="developer-card">
+      <img className="bg_dev_img" src={project.Main_Image ? `${project.Main_Image}` : '../img/RealtyKornerLogo.png'} alt="Developer BG img" />
         <img src={project.Developer_Logo ? `${project.Developer_Logo}` : '../img/RealtyKornerLogo.png'} alt="Developer Logo" className="developer-logo" />
         <h3 className="developer-title">{project.Developer_Name}</h3>
         <a href="http://localhost:3000/projectpage" className="developer-link">View all Projects <span>→</span></a>

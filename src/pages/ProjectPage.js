@@ -5,10 +5,12 @@ import ProjectHeader from "./projects_component/ProjectHeader";
 import LuxuryProject from "./projects_component/LuxuryProject";
 import Footer from "../component/Footer";
 import SimilarBudgetProject from "./projects_component/SimilarBudgetProject";
-import { FaBed } from "react-icons/fa";
-// import { MdPhotoSizeSelectSmall } from "react-icons/md";
 import TrendingProperties from "./projects_component/TrendingProperties";
 import BHks, { SuperAreaDisplay } from "../component/BHks";
+
+import { FaBed, FaBuilding, FaHome, FaRuler, FaRupeeSign } from "react-icons/fa";
+
+import { PiResizeFill } from "react-icons/pi";
 
 
 const BASE_URL = process.env.REACT_APP_API_URL;
@@ -128,8 +130,8 @@ const ProjectPage = () => {
         <div className="project-status">
           <div className="stat-box">
             <div className="start-inner-box">
-              <p>📐</p>
-              <p>Project Size</p>
+              <p><FaRuler  style={{color:'#2763ff', fontWeight:'100'}}/></p>
+              <p>&nbsp; Project Size</p>
             </div>
             <h3>{project?.Built || "N/A"} Acre</h3>
           </div>
@@ -137,9 +139,9 @@ const ProjectPage = () => {
           <div className="stat-box width_563">
             <div className="start-inner-box">
               <p>
-                <FaBed />
+                <FaBed style={{color:'#2763ff'}}/> 
               </p>
-              <p>Type of Units</p>
+              <p>&nbsp; Type of Units</p>
             </div>
             
             <h3><BHks property={project}/></h3>
@@ -147,16 +149,16 @@ const ProjectPage = () => {
 
           <div className="stat-box width_749">
             <div className="start-inner-box">
-              <p>🆕</p>
-              <p>Size of Units:</p>
+              <p><PiResizeFill style={{color:'#2763ff'}}/> </p>
+              <p>&nbsp; Size of Units</p>
             </div>
             <h3><SuperAreaDisplay property={project}/></h3>
           </div>
 
           <div className="stat-box width_937">
             <div className="start-inner-box">
-              <p>₹</p>
-              <p>Price of Units</p>
+              <p><FaRupeeSign style={{color:'#2763ff'}}/></p>
+              <p>&nbsp; Price of Units</p>
             </div>
             <h3>
               {`${(project?.Start_price / 10000000)?.toFixed(2).toString().slice(0, 4) || "N/A"}Cr 
@@ -167,16 +169,16 @@ const ProjectPage = () => {
 
           <div className="stat-box width_1125">
             <div className="start-inner-box">
-              <p>🏡</p>
-              <p>Total No. of Units</p>
+              <p><FaBuilding style={{color:'#2763ff'}}/></p>
+              <p>&nbsp; Total No. of Units</p>
             </div>
             <h3>{project?.Number_of_unit || "N/A"} units</h3>
           </div>
 
           <div className="stat-box last-box">
             <div className="start-inner-box">
-              <p>🏡</p>
-              <p>Possession</p>
+              <p><FaHome  style={{color:'#2763ff'}}/></p>
+              <p>&nbsp; Possession</p>
             </div>
             <h3>{project?.Possession || "N/A"}</h3>
           </div>
