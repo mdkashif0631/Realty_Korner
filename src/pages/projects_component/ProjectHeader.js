@@ -11,7 +11,7 @@ import EnquiryForm from '../../component/EnquiryForm';
 const ProjectHeader = ({ project }) => {
     const bhkTypes = [
     {
-        key: `${project.Beds_bhk} BHK`,
+        key: `${project.Beds_bhk} BHK ${Additional_Room}`,
         beds: project.Beds_bhk,
         superArea: project.Super_Area_bhk,
         builtupArea: project.Built_Up_Area_bhk,
@@ -19,7 +19,7 @@ const ProjectHeader = ({ project }) => {
         img: project.Floor_Plan_bhk,
     },
     {
-        key: `${project.Beds_bhk1} BHK`,
+        key: `${project.Beds_bhk1} BHK ${Additional_Room1}`,
         beds: project.Beds_bhk1,
         superArea: project.Super_Area_bhk1,
         builtupArea: project.Built_Up_Area_bhk1,
@@ -27,7 +27,7 @@ const ProjectHeader = ({ project }) => {
         img: project.Floor_Plan_bhk1,
     },
     {
-        key: `${project.Beds_bhk2} BHK`,
+        key: `${project.Beds_bhk2} BHK ${Additional_Room2}`,
         beds: project.Beds_bhk2,
         superArea: project.Super_Area_bhk2,
         builtupArea: project.Built_Up_Area_bhk2,
@@ -35,12 +35,28 @@ const ProjectHeader = ({ project }) => {
         img: project.Floor_Plan_bhk2,
     },
     {
-        key: `${project.Beds_bhk3} BHK`,
+        key: `${project.Beds_bhk3} BHK ${Additional_Room3}`,
         beds: project.Beds_bhk3,
         superArea: project.Super_Area_bhk3,
         builtupArea: project.Built_Up_Area_bhk3,
         carpetArea: project.Carpet_Area_bhk3,
         img: project.Floor_Plan_bhk3,
+    },
+    {
+        key: `${project.Beds_bhk4} BHK ${Additional_Room4}`,
+        beds: project.Beds_bhk4,
+        superArea: project.Super_Area_bhk4,
+        builtupArea: project.Built_Up_Area_bhk4,
+        carpetArea: project.Carpet_Area_bhk4,
+        img: project.Floor_Plan_bhk4,
+    },
+    {
+        key: `${project.Beds_bhk5} BHK ${Additional_Room5}`,
+        beds: project.Beds_bhk5,
+        superArea: project.Super_Area_bhk5,
+        builtupArea: project.Built_Up_Area_bhk5,
+        carpetArea: project.Carpet_Area_bhk5,
+        img: project.Floor_Plan_bhk5,
     },
     {
         key: "Penthouse",
