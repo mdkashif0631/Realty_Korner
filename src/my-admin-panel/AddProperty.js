@@ -36,6 +36,7 @@ const AddProperty = () => {
     // Feature of Project
     // ( For 2BHK )
     Beds_bhk: '',
+    Additional_Room: '',
     Super_Area_bhk: '',
     Carpet_Area_bhk: '',
     Built_Up_Area_bhk: '',
@@ -44,6 +45,7 @@ const AddProperty = () => {
     Floor_Plan_bhk: null,
     
     Beds_bhk1: '',
+    Additional_Room1: '',
     Super_Area_bhk1: '',
     Carpet_Area_bhk1: '',
     Built_Up_Area_bhk1: '',
@@ -52,6 +54,7 @@ const AddProperty = () => {
     Floor_Plan_bhk1: null,
     
     Beds_bhk2: '',
+    Additional_Room2: '',
     Super_Area_bhk2: '',
     Carpet_Area_bhk2: '',
     Built_Up_Area_bhk2: '',
@@ -60,6 +63,7 @@ const AddProperty = () => {
     Floor_Plan_bhk2: null,
     
     Beds_bhk3: '',
+    Additional_Room3: '',
     Super_Area_bhk3: '',
     Carpet_Area_bhk3: '',
     Built_Up_Area_bhk3: '',
@@ -70,14 +74,25 @@ const AddProperty = () => {
 
     // ( For 3BHK )
     Beds_bhk4: '',
+    Additional_Room4: '',
     Super_Area_bhk4: '',
     Carpet_Area_bhk4: '',
     Built_Up_Area_bhk4: '',
     Price_per_sq_bhk4: '',
+    Total_Price_bhk4: '',
+    Floor_Plan_bhk4: null,
+
+    Beds_bhk5: '',
+    Additional_Room5: '',
+    Super_Area_bhk5: '',
+    Carpet_Area_bhk5: '',
+    Built_Up_Area_bhk5: '',
+    Price_per_sq_bhk5: '',
     Total_Price_bhk5: '',
     Floor_Plan_bhk5: null,
     
     Beds_bhk6: '',
+    Additional_Room6: '',
     Super_Area_bhk6: '',
     Carpet_Area_bhk6: '',
     Built_Up_Area_bhk6: '',
@@ -86,6 +101,7 @@ const AddProperty = () => {
     Floor_Plan_bhk6: null,
     
     Beds_bhk7: '',
+    Additional_Room7: '',
     Super_Area_bhk7: '',
     Carpet_Area_bhk7: '',
     Built_Up_Area_bhk7: '',
@@ -94,6 +110,7 @@ const AddProperty = () => {
     Floor_Plan_bhk7: null,
     
     Beds_bhk8: '',
+    Additional_Room8: '',
     Super_Area_bhk8: '',
     Carpet_Area_bhk8: '',
     Built_Up_Area_bhk8: '',
@@ -185,6 +202,7 @@ const AddProperty = () => {
 
     const keysToRemove = [
       `Beds_bhk${suffix}`,
+      `Additional_Room${suffix}`,
       `Super_Area_bhk${suffix}`,
       `Carpet_Area_bhk${suffix}`,
       `Built_Up_Area_bhk${suffix}`,
@@ -201,6 +219,7 @@ const AddProperty = () => {
     const keySuffix = index === 0 ? '' : index;
     const keyMap = {
       Beds: `Beds_bhk${keySuffix}`,
+      Additional: `Additional_Room${keySuffix}`,
       Super_Area: `Super_Area_bhk${keySuffix}`,
       Carpet_Area: `Carpet_Area_bhk${keySuffix}`,
       Built_Up_Area: `Built_Up_Area_bhk${keySuffix}`,
@@ -580,6 +599,19 @@ const AddProperty = () => {
                               handleConfigChange(index, 'Beds', e.target.value)
                             }
                             value={formData[`Beds_bhk${suffix}`] || ''}
+                          />
+                        </div>
+
+                        <div className="beds_category">
+                          <label>Additional Room :</label>
+                          <input
+                            // className="beds_input"
+                            type="text"
+                            name={`Additional_Room${suffix}`}
+                            onChange={(e) =>
+                              handleConfigChange(index, 'Additional', e.target.value)
+                            }
+                            value={formData[`Additional_Room${suffix}`] || ''}
                           />
                         </div>
 
