@@ -7,7 +7,7 @@ import Footer from "../component/Footer";
 import SimilarBudgetProject from "./projects_component/SimilarBudgetProject";
 import TrendingProperties from "./projects_component/TrendingProperties";
 import BHks, { SuperAreaDisplay } from "../component/BHks";
-
+import { Helmet } from "react-helmet";
 import { FaBed, FaBuilding, FaHome, FaRuler, FaRupeeSign } from "react-icons/fa";
 
 import { PiResizeFill } from "react-icons/pi";
@@ -43,6 +43,7 @@ const ProjectPage = () => {
 
   if (!project) return <div>Loading...</div>;
 
+
   const images = [
     project?.Main_Image
       ? `${project.Main_Image}`
@@ -73,6 +74,23 @@ const ProjectPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{project?.Project_Name || "Project Details"} | {project?.Project_category}</title>
+        <meta name="description" content={project?.Project_description?.slice(0, 150) || "Explore premium real estate projects."} />
+
+        {/* Open Graph Tags for Social Sharing */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={project?.Project_Name || "Project Details"} />
+        <meta property="og:description" content={project?.Project_description?.slice(0, 150) || "Explore premium real estate projects."} />
+        <meta property="og:image" content={project?.Main_Image || "/img/placeholder-image.jpg"} />
+        <meta property="og:url" content={`https://realty-korner.vercel.app/project/${slug}`} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={project?.Project_Name} />
+        <meta name="twitter:description" content={project?.Project_description?.slice(0, 150)} />
+        <meta name="twitter:image" content={project?.Main_Image} />
+      </Helmet>
       <div className="page-of-project">
         {/* Hero Section */}
         <div className="hero-container">
@@ -118,9 +136,9 @@ const ProjectPage = () => {
 
           <div className="rera_btn">
             <p className="rera-tooltip">
-              RERA Verified 
+              RERA Verified
               <span className="tooltip-text">
-                { project?.Developer_Rera_No || "Not Available"}
+                {project?.Developer_Rera_No || "Not Available"}
               </span>
             </p>
           </div>
@@ -130,7 +148,7 @@ const ProjectPage = () => {
         <div className="project-status">
           <div className="stat-box">
             <div className="start-inner-box">
-              <p><FaRuler  style={{color:'#2763ff', fontWeight:'100'}}/></p>
+              <p><FaRuler style={{ color: '#2763ff', fontWeight: '100' }} /></p>
               <p>&nbsp; Project Size</p>
             </div>
             <h3>{project?.Built || "N/A"} Acre</h3>
@@ -139,25 +157,25 @@ const ProjectPage = () => {
           <div className="stat-box width_563">
             <div className="start-inner-box">
               <p>
-                <FaBed style={{color:'#2763ff'}}/> 
+                <FaBed style={{ color: '#2763ff' }} />
               </p>
               <p>&nbsp; Type of Units</p>
             </div>
-            
-            <h3><BHks property={project}/></h3>
+
+            <h3><BHks property={project} /></h3>
           </div>
 
           <div className="stat-box width_749">
             <div className="start-inner-box">
-              <p><PiResizeFill style={{color:'#2763ff'}}/> </p>
+              <p><PiResizeFill style={{ color: '#2763ff' }} /> </p>
               <p>&nbsp; Size of Units</p>
             </div>
-            <h3><SuperAreaDisplay property={project}/></h3>
+            <h3><SuperAreaDisplay property={project} /></h3>
           </div>
 
           <div className="stat-box width_937">
             <div className="start-inner-box">
-              <p><FaRupeeSign style={{color:'#2763ff'}}/></p>
+              <p><FaRupeeSign style={{ color: '#2763ff' }} /></p>
               <p>&nbsp; Price of Units</p>
             </div>
             <h3>
@@ -169,7 +187,7 @@ const ProjectPage = () => {
 
           <div className="stat-box width_1125">
             <div className="start-inner-box">
-              <p><FaBuilding style={{color:'#2763ff'}}/></p>
+              <p><FaBuilding style={{ color: '#2763ff' }} /></p>
               <p>&nbsp; Total No. of Units</p>
             </div>
             <h3>{project?.Number_of_unit || "N/A"} units</h3>
@@ -177,7 +195,7 @@ const ProjectPage = () => {
 
           <div className="stat-box last-box">
             <div className="start-inner-box">
-              <p><FaHome  style={{color:'#2763ff'}}/></p>
+              <p><FaHome style={{ color: '#2763ff' }} /></p>
               <p>&nbsp; Possession</p>
             </div>
             <h3>{project?.Possession || "N/A"}</h3>
